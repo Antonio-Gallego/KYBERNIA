@@ -274,8 +274,19 @@ section {
 }
 
 .nav-logo img {
-  height: 36px;
+  height: 48px;
   width: auto;
+}
+
+.nav-logo-img {
+  height: 48px;
+  width: auto;
+  filter: drop-shadow(0 0 12px rgba(13, 185, 242, 0.35));
+  transition: filter var(--transition-base);
+}
+
+.nav-logo:hover .nav-logo-img {
+  filter: drop-shadow(0 0 20px rgba(13, 185, 242, 0.6));
 }
 
 .nav-brand-text {
@@ -847,6 +858,74 @@ section {
   font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--color-text-secondary);
+}
+
+/* ── Pilares Intro: Logo + Heading side by side ── */
+.pilares-intro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.pilares-intro-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pilares-intro-logo::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(13, 185, 242, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pilares-logo-img {
+  width: 320px;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 24px rgba(13, 185, 242, 0.4))
+    drop-shadow(0 0 60px rgba(13, 185, 242, 0.15));
+  position: relative;
+  z-index: 1;
+  animation: logoGlow 4s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+  0%, 100% { filter: drop-shadow(0 0 24px rgba(13, 185, 242, 0.4)) drop-shadow(0 0 60px rgba(13, 185, 242, 0.15)); }
+  50%       { filter: drop-shadow(0 0 36px rgba(13, 185, 242, 0.65)) drop-shadow(0 0 80px rgba(13, 185, 242, 0.25)); }
+}
+
+.pilares-intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pilares-intro-text h2 {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.pilares-intro-text p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 580px;
 }
 
 .pilares-grid {
@@ -1739,6 +1818,15 @@ section {
     gap: var(--space-3);
   }
 
+  .pilares-intro {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-5);
+  }
+
+  .pilares-logo-img {
+    width: 220px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
@@ -1811,6 +1899,24 @@ section {
 
   .pilares-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pilares-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-4);
+  }
+
+  .pilares-intro-logo {
+    justify-content: center;
+  }
+
+  .pilares-logo-img {
+    width: 200px;
+  }
+
+  .pilares-intro-text {
+    align-items: center;
   }
 
   .form-row {
