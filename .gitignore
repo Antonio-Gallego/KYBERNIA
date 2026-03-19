@@ -20,3 +20,19 @@ npm-debug.log*
 # Build outputs
 dist/
 build/
+
+# ──────────────────────────────────────────────────────────
+# Carpetas de trabajo local — NO publicar en GitHub
+# ──────────────────────────────────────────────────────────
+
+# Logos e imágenes fuente originales (archivos grandes, privados)
+Img/
+
+# Documentación interna y planificación del proyecto
+Info Origen/
+
+# Contexto para agentes de IA (Antigravity, etc.)
+.agents/
+
+# Carpeta src/ — mirror local, se trabaja directamente en docs/
+src/
