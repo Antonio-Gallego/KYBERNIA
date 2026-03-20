@@ -835,7 +835,7 @@ section {
    CORE EXPERTISE — 3 PILARES
    ============================================================ */
 #pilares {
-  padding: var(--space-16) 0;
+  padding: var(--space-8) 0 var(--space-16);
   position: relative;
 }
 
@@ -898,12 +898,12 @@ section {
     drop-shadow(0 0 60px rgba(13, 185, 242, 0.15));
   position: relative;
   z-index: 1;
-  animation: logoGlow 4s ease-in-out infinite;
+  animation: logoGlow 3s ease-in-out infinite;
 }
 
 @keyframes logoGlow {
-  0%, 100% { filter: drop-shadow(0 0 24px rgba(13, 185, 242, 0.4)) drop-shadow(0 0 60px rgba(13, 185, 242, 0.15)); }
-  50%       { filter: drop-shadow(0 0 36px rgba(13, 185, 242, 0.65)) drop-shadow(0 0 80px rgba(13, 185, 242, 0.25)); }
+  0%, 100% { filter: drop-shadow(0 0 24px rgba(13, 185, 242, 0.3)) drop-shadow(0 0 60px rgba(13, 185, 242, 0.15)); }
+  50%       { filter: drop-shadow(0 0 45px rgba(13, 185, 242, 0.95)) drop-shadow(0 0 100px rgba(13, 185, 242, 0.5)); }
 }
 
 .pilares-intro-text {
@@ -1596,8 +1596,8 @@ section {
 }
 
 .footer-logo img {
-  height: 32px;
-  width: auto;
+  width: 200px;
+  height: auto;
 }
 
 .footer-logo-text {
